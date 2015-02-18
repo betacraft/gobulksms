@@ -1,10 +1,9 @@
-package models
+package main
 
 import (
 	"bulksms/constants"
 	"bytes"
 	"errors"
-	"log"
 	"net/http"
 	"net/url"
 )
@@ -32,13 +31,10 @@ func (sms *SMS) Send() error {
 
 	client := &http.Client{}
 	urlParams := bytes.NewBufferString(params.Encode())
-	log.Println(" url params ", urlParams)
 	var r *http.Request
 	r, _ = http.NewRequest("POST", constants.SEND_SMS_URL, urlParams)
 	r.Header.Add("Content-Type", "application/x-www-form-urlencoded")
-	log.Println(" request is ", r)
-	resp, err := client.Do(r)
-	log.Println(" resp ", resp)
+	_, err := client.Do(r)
 	if err != nil {
 		return err
 	}
