@@ -1,0 +1,15 @@
+package constants
+
+const (
+	IN_PROGRESS                    = 0
+	SCHEDULED                      = 1
+	INTERNAL_FATAL_ERROR           = 22
+	AUTHENTICATION_FAILURE         = 23
+	DATA_VALIDATION_FAILED         = 24
+	INSUFFICIENT_CREDITS           = 25
+	UPSTREAM_CREDITS_NOT_AVAILABLE = 26
+	EXCEEDED_DAILY_QUOTA           = 27
+	EXCEEDED_UPSTREAM_QUOTA        = 28
+	TEMPORARILY_UNAVAILABLE        = 40
+	MAX_BATCH_SIZE_EXCEEDED        = 201
+)
