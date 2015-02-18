@@ -1,4 +1,4 @@
-package main
+package gobulksms
 
 type Message struct {
 	Text string `json:"message"`

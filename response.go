@@ -1,4 +1,4 @@
-package main
+package gobulksms
 
 const (
 	IN_PROGRESS                    = 0
