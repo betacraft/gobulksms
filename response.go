@@ -1,4 +1,4 @@
-package constants
+package main
 
 const (
 	IN_PROGRESS                    = 0

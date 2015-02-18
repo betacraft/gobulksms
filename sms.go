@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bulksms/constants"
 	"bytes"
 	"errors"
 	"net/http"
@@ -32,7 +31,7 @@ func (sms *SMS) Send() error {
 	client := &http.Client{}
 	urlParams := bytes.NewBufferString(params.Encode())
 	var r *http.Request
-	r, _ = http.NewRequest("POST", constants.SEND_SMS_URL, urlParams)
+	r, _ = http.NewRequest("POST", SEND_SMS_URL, urlParams)
 	r.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 	_, err := client.Do(r)
 	if err != nil {
